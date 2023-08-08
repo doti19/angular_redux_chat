@@ -33,3 +33,14 @@ export const addMessage: ActionCreator<AddMessageAction> = (thread: Thread, mess
         message: message
     };
 };
+
+export const SELECT_THREAD = '[Thread] Select';
+
+export interface SelectThreadAction extends Action{
+    thread: Thread;
+}
+
+export const selectThread: ActionCreator<SelectThreadAction> = (thread) =>({
+    type: SELECT_THREAD,
+    thread: thread,
+});
